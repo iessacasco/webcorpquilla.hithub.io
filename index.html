@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebCorpQuilla | Páginas web para emprendedores y pequeños negocios</title>
+<meta name="description" content="Creamos, diseñamos y desarrollamos páginas web que impulsan tu negocio. Diseño web, tiendas online, marketing digital y mantenimiento para emprendedores.">
+<meta name="keywords" content="crear página web para emprendedores, diseño web para pequeños negocios, páginas web para emprendedores, crear sitio web para mi negocio, diseño de páginas web, página web económica para emprendimientos">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="WebCorpQuilla | Tu negocio en el mundo digital">
+<meta property="og:description" content="Creamos sitios web, tiendas online y estrategias de marketing digital que impulsan el crecimiento de tu negocio.">
+<meta property="og:site_name" content="WebCorpQuilla">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white'/%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%230B63CE' stroke-width='6'/%3E%3Cpath d='M14 50h72M50 14a60 60 0 010 72 60 60 0 010-72' fill='none' stroke='%230B63CE' stroke-width='5'/%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "WebCorpQuilla",
+  "description": "Diseño, desarrollo y creación de páginas web para emprendedores, profesionales y pequeñas empresas.",
+  "areaServed": "PE",
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root{
+    --navy:#0B2545;
+    --navy-2:#123A6B;
+    --blue:#0B63CE;
+    --blue-bright:#2C86F2;
+    --sky:#EEF5FF;
+    --ink-soft:#5B6B84;
+    --line:#DCE6F5;
+    --white:#FFFFFF;
+    --success:#16A672;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.font-display{ font-family:'Poppins', sans-serif; }
+  .container-px{ padding-left:1.25rem; padding-right:1.25rem; }
+  @media(min-width:768px){ .container-px{ padding-left:3rem; padding-right:3rem; } }
+
+  .logo-word b{ color:var(--navy); font-weight:700; }
+  .logo-word span{ color:var(--blue); font-weight:700; }
+
+  .btn-primary{
+    background:var(--blue);
+    color:#fff;
+    font-weight:600;
+    transition:background .18s ease, transform .18s ease;
+  }
+  .btn-primary:hover{ background:var(--blue-bright); transform:translateY(-1px); }
+
+  .btn-outline-navy{
+    border:1.5px solid var(--navy);
+    color:var(--navy);
+    font-weight:600;
+    transition:background .18s ease,color .18s ease;
+  }
+  .btn-outline-navy:hover{ background:var(--navy); color:#fff; }
+
+  .btn-outline-white{
+    border:1.5px solid rgba(255,255,255,.55);
+    color:#fff;
+    font-weight:600;
+    transition:background .18s ease;
+  }
+  .btn-outline-white:hover{ background:rgba(255,255,255,.14); }
+
+  .btn-pill-white{
+    background:#fff;
+    color:var(--navy);
+    font-weight:600;
+    transition:transform .18s ease;
+  }
+  .btn-pill-white:hover{ transform:translateY(-1px); }
+
+  .navy-panel{
+    background:linear-gradient(120deg, var(--navy) 0%, var(--navy-2) 70%, #1B4C8C 100%);
+  }
+
+  .nav-link{ position:relative; color:var(--ink-soft); font-weight:500; }
+  .nav-link::after{ content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:var(--blue); transition:width .2s ease; }
+  .nav-link:hover{ color:var(--navy); }
+  .nav-link:hover::after{ width:100%; }
+  .nav-link.active{ color:var(--navy); }
+  .nav-link.active::after{ width:100%; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } html{ scroll-behavior:auto; } }
+
+  .icon-circle{
+    width:56px; height:56px; border-radius:9999px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--sky);
+    border:1.5px solid #D7E7FF;
+  }
+
+  .bento-card{ border:1px solid var(--line); background:var(--white); border-radius:18px; }
+
+  .pricing-card{ border:1px solid var(--line); background:var(--white); border-radius:20px; }
+  .pricing-card.featured{ border:2px solid var(--blue); box-shadow:0 24px 48px -24px rgba(11,99,206,.35); }
+
+  /* ---- Generic slider ---- */
+  .slider-track{ display:flex; transition:transform .5s cubic-bezier(.65,0,.35,1); }
+  .slider-viewport{ overflow:hidden; }
+  .slider-dot{ width:8px; height:8px; border-radius:9999px; background:#C6D8F2; transition:background .2s ease, width .2s ease; cursor:pointer; }
+  .slider-dot.active{ background:var(--blue); width:22px; border-radius:9999px; }
+  .slider-arrow{
+    width:44px; height:44px; border-radius:9999px; background:#fff; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; transition:background .15s ease;
+    flex-shrink:0;
+  }
+  .slider-arrow:hover{ background:var(--sky); }
+  .slider-arrow.dark{ background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.35); }
+  .slider-arrow.dark:hover{ background:rgba(255,255,255,.22); }
+
+  .device-shell{ background:#fff; border-radius:12px; box-shadow:0 30px 60px -18px rgba(4,20,45,.55); overflow:hidden; }
+
+  .port-card{ border-radius:16px; overflow:hidden; position:relative; }
+  .port-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,37,69,0) 40%, rgba(11,37,69,.94) 100%);
+    display:flex; flex-direction:column; justify-content:flex-end; padding:1.1rem;
+  }
+
+  .faq-item .faq-answer{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .faq-item.open .faq-answer{ max-height:300px; }
+  .faq-item .chev{ transition:transform .25s ease; }
+  .faq-item.open .chev{ transform:rotate(180deg); }
+
+  input, textarea, select{
+    border:1.5px solid var(--line); border-radius:10px; padding:.7rem .9rem; width:100%;
+    background:#fff; font-family:'Inter',sans-serif; color:var(--navy); transition:border-color .15s ease;
+  }
+  input:focus, textarea:focus, select:focus{ outline:none; border-color:var(--blue); }
+  label{ font-size:.85rem; font-weight:600; color:var(--ink-soft); margin-bottom:.3rem; display:block; }
+  .field-error{ color:#D6244B; font-size:.78rem; margin-top:.25rem; display:none; }
+  .field.invalid input, .field.invalid textarea, .field.invalid select{ border-color:#D6244B; }
+  .field.invalid .field-error{ display:block; }
+
+  :focus-visible{ outline:3px solid var(--blue); outline-offset:2px; }
+
+  .step-line{ background:linear-gradient(90deg, var(--blue), var(--blue-bright)); }
+  .whatsapp-float{ position:fixed; right:1.25rem; bottom:1.25rem; z-index:50; }
+  .stars{ color:#F5A623; letter-spacing:2px; }
+  ::selection{ background:var(--blue); color:#fff; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur border-b border-[var(--line)]">
+  <div class="container-px max-w-7xl mx-auto flex items-center justify-between h-[76px]">
+    <a href="#inicio" class="flex items-center gap-3">
+      <svg width="42" height="42" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="48" fill="white" stroke="#DCE6F5" stroke-width="1"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#0B63CE" stroke-width="6"/>
+        <path d="M12 50h76M50 12a62 62 0 010 76 62 62 0 010-76" fill="none" stroke="#0B63CE" stroke-width="5"/>
+      </svg>
+      <span class="leading-tight">
+        <span class="font-display logo-word text-lg block"><b>WebCorp</b><span>Quilla</span></span>
+        <span class="text-[11px] text-[var(--ink-soft)] block -mt-1">Tu negocio en el mundo digital</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 text-sm">
+      <a href="#inicio" class="nav-link active">Inicio</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#planes" class="nav-link">Planes</a>
+      <a href="#portafolio" class="nav-link">Portafolio</a>
+      <a href="#proceso" class="nav-link">Proceso</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contacto" class="hidden sm:inline-flex btn-primary rounded-full px-5 py-2.5 text-sm">Cotiza ahora</a>
+      <button id="menu-btn" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-[var(--line)]">
+        <svg id="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2" stroke-linecap="round" class="hidden"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-[var(--line)]">
+    <div class="container-px py-4 flex flex-col gap-1 text-[15px]">
+      <a href="#inicio" class="py-2.5 nav-link">Inicio</a>
+      <a href="#nosotros" class="py-2.5 nav-link">Nosotros</a>
+      <a href="#servicios" class="py-2.5 nav-link">Servicios</a>
+      <a href="#planes" class="py-2.5 nav-link">Planes</a>
+      <a href="#portafolio" class="py-2.5 nav-link">Portafolio</a>
+      <a href="#proceso" class="py-2.5 nav-link">Proceso</a>
+      <a href="#faq" class="py-2.5 nav-link">FAQ</a>
+      <a href="#contacto" class="py-2.5 nav-link">Contacto</a>
+      <a href="#contacto" class="btn-primary rounded-full px-5 py-2.5 text-sm text-center mt-2">Cotiza ahora</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SLIDER -->
+<section id="inicio" class="pt-[76px] navy-panel text-white relative overflow-hidden">
+  <div class="container-px max-w-7xl mx-auto relative">
+    <div class="slider-viewport" id="hero-viewport">
+      <div class="slider-track" id="hero-track">
+
+        <!-- Slide 1 -->
+        <div class="w-full shrink-0 grid lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-[#8FC2FF] mb-4">SOLUCIONES DIGITALES PARA TU NEGOCIO</p>
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl leading-[1.1]">
+              <span class="text-white">WebCorp</span><span class="text-[#5FA8FF]">Quilla</span>
+            </h1>
+            <p class="mt-4 text-xl font-medium text-[#EAF2FF]">Creamos, diseñamos y desarrollamos páginas web que impulsan tu negocio.</p>
+            <p class="mt-4 text-[#B9C9E6] max-w-md">En WebCorpQuilla convertimos tus ideas en soluciones digitales innovadoras, personalizadas y al alcance de todos.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#servicios" class="btn-primary rounded-full px-7 py-3.5 text-center">Nuestros servicios</a>
+              <a href="#contacto" class="btn-outline-white rounded-full px-7 py-3.5 text-center">Contáctanos</a>
+            </div>
+          </div>
+          <div class="relative h-[300px] sm:h-[380px] hidden md:block">
+            <div class="device-shell absolute left-0 top-6 w-[80%] max-w-[460px]">
+              <div class="h-7 bg-[#EDF2FA] flex items-center gap-1.5 px-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></span>
+              </div>
+              <div class="p-4 bg-[#0B2545]">
+                <div class="h-3 w-24 rounded-full bg-[#5FA8FF] mb-3"></div>
+                <div class="h-16 rounded-lg bg-gradient-to-br from-[#123A6B] to-[#1B4C8C] mb-3"></div>
+                <div class="grid grid-cols-3 gap-2">
+                  <div class="h-10 rounded-md bg-[#123A6B]"></div><div class="h-10 rounded-md bg-[#123A6B]"></div><div class="h-10 rounded-md bg-[#123A6B]"></div>
+                </div>
+              </div>
+            </div>
+            <div class="device-shell absolute right-0 bottom-0 w-[38%] max-w-[190px] border-4 border-[#0B2545]">
+              <div class="p-3 bg-white">
+                <div class="h-2 w-10 rounded-full bg-[var(--blue)] mb-3"></div>
+                <div class="h-20 rounded-lg bg-[var(--sky)] mb-2"></div>
+                <div class="h-3 w-full rounded bg-[var(--sky)] mb-1.5"></div>
+                <div class="h-3 w-3/4 rounded bg-[var(--sky)] mb-3"></div>
+                <div class="h-8 w-full rounded-full bg-[var(--blue)]"></div>
+              </div>
+            </div>
+            <div class="absolute -z-10 -right-10 top-0 w-64 h-64 rounded-full bg-[#2C86F2] opacity-20 blur-3xl"></div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="w-full shrink-0 grid lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-[#8FC2FF] mb-4">TIENDAS VIRTUALES</p>
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl leading-[1.1] text-white">Vende en línea sin complicaciones.</h1>
+            <p class="mt-4 text-xl font-medium text-[#EAF2FF]">Catálogos y tiendas virtuales conectadas a WhatsApp.</p>
+            <p class="mt-4 text-[#B9C9E6] max-w-md">Muestra tus productos, recibe pedidos y haz crecer tus ventas desde cualquier dispositivo.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#planes" class="btn-primary rounded-full px-7 py-3.5 text-center">Ver planes</a>
+              <a href="#portafolio" class="btn-outline-white rounded-full px-7 py-3.5 text-center">Ver portafolio</a>
+            </div>
+          </div>
+          <div class="relative h-[300px] sm:h-[380px] hidden md:block">
+            <div class="device-shell absolute right-0 top-6 w-[80%] max-w-[460px]">
+              <div class="h-7 bg-[#EDF2FA] flex items-center gap-1.5 px-3">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F57]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#FEBC2E]"></span><span class="w-2.5 h-2.5 rounded-full bg-[#28C840]"></span>
+              </div>
+              <div class="p-4 bg-white">
+                <div class="grid grid-cols-3 gap-2 mb-3">
+                  <div class="h-16 rounded-md bg-[var(--sky)]"></div><div class="h-16 rounded-md bg-[var(--sky)]"></div><div class="h-16 rounded-md bg-[var(--sky)]"></div>
+                </div>
+                <div class="h-3 w-1/2 rounded bg-[var(--sky)] mb-2"></div>
+                <div class="h-8 w-1/3 rounded-full bg-[var(--blue)]"></div>
+              </div>
+            </div>
+            <div class="absolute -z-10 -left-10 bottom-0 w-64 h-64 rounded-full bg-[#5FA8FF] opacity-20 blur-3xl"></div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="w-full shrink-0 grid lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-[#8FC2FF] mb-4">MARKETING DIGITAL</p>
+            <h1 class="font-display font-extrabold text-4xl sm:text-5xl leading-[1.1] text-white">Haz que más clientes te encuentren.</h1>
+            <p class="mt-4 text-xl font-medium text-[#EAF2FF]">SEO básico, redes sociales y presencia digital completa.</p>
+            <p class="mt-4 text-[#B9C9E6] max-w-md">Diseñamos tu presencia digital para que tu negocio crezca de forma sostenida.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#contacto" class="btn-primary rounded-full px-7 py-3.5 text-center">Solicitar cotización</a>
+              <a href="#faq" class="btn-outline-white rounded-full px-7 py-3.5 text-center">Preguntas frecuentes</a>
+            </div>
+          </div>
+          <div class="relative h-[300px] sm:h-[380px] hidden md:block">
+            <div class="device-shell absolute left-8 top-10 w-[70%] max-w-[400px]">
+              <div class="p-5 bg-white">
+                <div class="flex items-end gap-2 h-24 mb-3">
+                  <div class="w-6 h-10 bg-[var(--sky)] rounded"></div>
+                  <div class="w-6 h-16 bg-[var(--blue)] rounded"></div>
+                  <div class="w-6 h-12 bg-[var(--sky)] rounded"></div>
+                  <div class="w-6 h-20 bg-[var(--blue-bright)] rounded"></div>
+                  <div class="w-6 h-14 bg-[var(--sky)] rounded"></div>
+                </div>
+                <div class="h-3 w-2/3 rounded bg-[var(--sky)]"></div>
+              </div>
+            </div>
+            <div class="absolute -z-10 right-0 top-0 w-64 h-64 rounded-full bg-[#2C86F2] opacity-20 blur-3xl"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- hero controls -->
+    <div class="flex items-center justify-between pb-8 md:absolute md:bottom-8 md:left-12 md:right-12 md:pb-0">
+      <div class="flex gap-2" id="hero-dots"></div>
+      <div class="flex gap-3">
+        <button class="slider-arrow dark" id="hero-prev" aria-label="Anterior"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="slider-arrow dark" id="hero-next" aria-label="Siguiente"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE NOSOTROS -->
+<section id="nosotros" class="py-20 md:py-24">
+  <div class="container-px max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Sobre <span class="text-[var(--blue)]">Nosotros</span></h2>
+      <p class="mt-5 text-[var(--ink-soft)] max-w-lg">En WebCorpQuilla somos un equipo de profesionales apasionados por la tecnología y el marketing digital. Nuestro objetivo es ayudarte a crecer en el mundo digital con soluciones creativas, funcionales y a la medida de tus necesidades.</p>
+      <a href="#servicios" class="btn-primary inline-flex rounded-full px-7 py-3 mt-7 text-sm">Conoce más</a>
+    </div>
+    <div class="reveal relative h-[280px] rounded-2xl overflow-hidden navy-panel flex items-center justify-center">
+      <div class="device-shell w-[75%] max-w-[380px]">
+        <div class="h-6 bg-[#EDF2FA] flex items-center gap-1.5 px-3">
+          <span class="w-2 h-2 rounded-full bg-[#FF5F57]"></span><span class="w-2 h-2 rounded-full bg-[#FEBC2E]"></span><span class="w-2 h-2 rounded-full bg-[#28C840]"></span>
+        </div>
+        <div class="p-5 bg-[#0B2545]">
+          <p class="font-display italic text-white text-lg leading-snug">"Ideas que se<br>convierten en<br>resultados"</p>
+          <div class="h-1.5 w-16 rounded-full bg-[var(--blue-bright)] mt-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUÉ ELEGIRNOS -->
+<section class="py-16 bg-[var(--sky)]">
+  <div class="container-px max-w-7xl mx-auto">
+    <h2 class="font-display font-bold text-2xl md:text-3xl text-center reveal">¿Por qué elegir <span class="text-[var(--blue)]">WebCorpQuilla</span>?</h2>
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center reveal">
+        <div class="icon-circle mx-auto"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <p class="font-semibold text-sm mt-3">Diseño personalizado<br>para tu marca</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="icon-circle mx-auto"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <p class="font-semibold text-sm mt-3">Soporte técnico<br>continuo</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="icon-circle mx-auto"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="#0B63CE"/></svg></div>
+        <p class="font-semibold text-sm mt-3">Enfoque en<br>resultados</p>
+      </div>
+      <div class="text-center reveal">
+        <div class="icon-circle mx-auto"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
+        <p class="font-semibold text-sm mt-3">Calidad y<br>compromiso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS (SLIDER) -->
+<section id="servicios" class="py-20 md:py-24">
+  <div class="container-px max-w-7xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-4 reveal">
+      <div>
+        <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Nuestros <span class="text-[var(--blue)]">Servicios</span></h2>
+        <p class="mt-2 text-[var(--ink-soft)]">Soluciones digitales para cada etapa de tu negocio.</p>
+      </div>
+      <div class="flex gap-3">
+        <button class="slider-arrow" id="services-prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="slider-arrow" id="services-next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="mt-10 slider-viewport" id="services-viewport">
+      <div class="slider-track" id="services-track">
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Diseño Web</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Páginas web modernas, rápidas y adaptables a todos los dispositivos.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h2l2.6 12.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L22 7H6"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Tienda Online</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Vende en línea de forma segura y eficiente, conectada a WhatsApp.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><path d="M3 11l18-7-7 18-2-8-9-3z"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Marketing Digital</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Más visibilidad, más clientes, más ventas para tu negocio.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.6V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1-1.6 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.6-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.6-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.9.3H9a1.7 1.7 0 001-1.6V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.6 1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.9V9a1.7 1.7 0 001.6 1h.1a2 2 0 110 4h-.1a1.7 1.7 0 00-1.6 1z"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Mantenimiento Web</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Tu sitio siempre seguro, actualizado y funcionando.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="13" width="7" height="7" rx="1"/><rect x="14" y="13" width="7" height="7" rx="1"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Catálogo Digital</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Presentación profesional y ordenada de tus productos.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.6L3 20l1-5.4A8.5 8.5 0 1121 11.5z"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Integración WhatsApp</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Botones y formularios conectados directo a tu WhatsApp.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3c2.5 2.5 2.5 15.5 0 18M12 3c-2.5 2.5-2.5 15.5 0 18"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Dominio y Hosting</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Te orientamos en el registro y la contratación del hosting.</p>
+          </div>
+        </div>
+        <div class="service-slide shrink-0 px-2.5" style="width:280px">
+          <div class="bento-card p-7 h-full reveal">
+            <div class="icon-circle mb-5"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B63CE" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M9 21H5a2 2 0 01-2-2v-4M15 21h4a2 2 0 002-2v-4"/></svg></div>
+            <h3 class="font-display font-semibold text-lg mb-2">Landing Pages</h3>
+            <p class="text-sm text-[var(--ink-soft)]">Páginas enfocadas en promocionar un producto o campaña.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-2 justify-center mt-6" id="services-dots"></div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes" class="py-20 md:py-24 bg-[var(--sky)]">
+  <div class="container-px max-w-7xl mx-auto">
+    <div class="max-w-2xl reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Elige el plan ideal para tu emprendimiento</h2>
+      <p class="mt-3 text-[var(--ink-soft)]">Precios de referencia, editables desde las variables al final del código.</p>
+    </div>
+
+    <div class="mt-12 grid lg:grid-cols-3 gap-6 items-start">
+      <div class="pricing-card p-8 reveal">
+        <h3 class="font-display font-semibold text-xl">Plan Emprendedor</h3>
+        <p class="text-sm text-[var(--ink-soft)] mt-1">Ideal para comenzar.</p>
+        <p class="mt-6 font-display text-3xl font-bold text-[var(--navy)]" data-price="emprendedor">S/ 490</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--ink-soft)]">
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Página web de una sección</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Diseño responsive</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Botón de WhatsApp</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Formulario de contacto</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Integración con redes sociales</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Optimización básica SEO</li>
+        </ul>
+        <a href="#contacto" data-plan="Plan Emprendedor" class="plan-btn btn-outline-navy block text-center rounded-full px-6 py-3 mt-8">Elegir plan</a>
+      </div>
+
+      <div class="pricing-card featured p-8 relative reveal lg:-translate-y-3">
+        <span class="absolute -top-3 left-8 bg-[var(--blue)] text-white text-xs font-semibold px-3 py-1 rounded-full">Más elegido</span>
+        <h3 class="font-display font-semibold text-xl">Plan Profesional</h3>
+        <p class="text-sm text-[var(--ink-soft)] mt-1">Ideal para negocios en crecimiento.</p>
+        <p class="mt-6 font-display text-3xl font-bold text-[var(--navy)]" data-price="profesional">S/ 890</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--ink-soft)]">
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Página web multipágina</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Diseño personalizado</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>WhatsApp integrado</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Galería de productos/servicios</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Redes sociales</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>SEO básico</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Google Maps</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Soporte inicial</li>
+        </ul>
+        <a href="#contacto" data-plan="Plan Profesional" class="plan-btn btn-primary block text-center rounded-full px-6 py-3 mt-8">Quiero este plan</a>
+      </div>
+
+      <div class="pricing-card p-8 reveal">
+        <h3 class="font-display font-semibold text-xl">Plan Negocio</h3>
+        <p class="text-sm text-[var(--ink-soft)] mt-1">Presencia digital completa.</p>
+        <p class="mt-6 font-display text-3xl font-bold text-[var(--navy)]" data-price="negocio">A cotizar</p>
+        <ul class="mt-6 space-y-3 text-sm text-[var(--ink-soft)]">
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Sitio web personalizado</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Catálogo o tienda virtual</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Diseño avanzado</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>WhatsApp y redes sociales</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Google Maps y SEO</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Integraciones digitales</li>
+          <li class="flex gap-2"><span class="text-[var(--blue)]">✓</span>Soporte y mantenimiento</li>
+        </ul>
+        <a href="#contacto" data-plan="Plan Negocio" class="plan-btn btn-outline-navy block text-center rounded-full px-6 py-3 mt-8">Solicitar cotización</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAFOLIO (SLIDER) -->
+<section id="portafolio" class="py-20 md:py-24">
+  <div class="container-px max-w-7xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-4 reveal">
+      <div>
+        <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Conoce algunos de nuestros <span class="text-[var(--blue)]">trabajos</span></h2>
+        <p class="mt-2 text-[var(--ink-soft)]">Proyectos demostrativos, elaborados con fines de ejemplo.</p>
+      </div>
+      <div class="flex gap-3">
+        <button class="slider-arrow" id="port-prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="slider-arrow" id="port-next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="mt-10 slider-viewport" id="port-viewport">
+      <div class="slider-track" id="port-track">
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#0B2545,#1B4C8C)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#8FC2FF] font-medium mb-1">Restaurante</span>
+              <h3 class="font-display font-semibold text-white text-lg">Sabor Norteño</h3>
+              <p class="text-[#D9E6F7] text-sm mt-1">Menú digital y reservas por WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#123A6B,#2C86F2)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#BBD9FF] font-medium mb-1">Barbería</span>
+              <h3 class="font-display font-semibold text-white text-lg">Barbería Lima Central</h3>
+              <p class="text-[#DCE9F9] text-sm mt-1">Reserva de citas y catálogo de cortes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#0B2545,#0B63CE)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#9FCBFF] font-medium mb-1">Tienda de ropa</span>
+              <h3 class="font-display font-semibold text-white text-lg">Urbana Studio</h3>
+              <p class="text-[#DCE6F7] text-sm mt-1">Catálogo de temporada y tienda virtual.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#123A6B,#5FA8FF)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#DCEEFF] font-medium mb-1">Salón de belleza</span>
+              <h3 class="font-display font-semibold text-white text-lg">Bella Studio</h3>
+              <p class="text-[#E6F0FB] text-sm mt-1">Galería de servicios y agenda online.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#0B2545,#2C86F2)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#A9D2FF] font-medium mb-1">Técnico de computadoras</span>
+              <h3 class="font-display font-semibold text-white text-lg">RepairTech</h3>
+              <p class="text-[#DCE9F9] text-sm mt-1">Cotización de reparaciones en línea.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#123A6B,#1B4C8C)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#BFD9FF] font-medium mb-1">Emprendimiento gastronómico</span>
+              <h3 class="font-display font-semibold text-white text-lg">Dulce Hogar</h3>
+              <p class="text-[#E1EBF8] text-sm mt-1">Pedidos de postres por catálogo digital.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#0B2545,#3E6FBF)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#B9D6FF] font-medium mb-1">Agencia de servicios</span>
+              <h3 class="font-display font-semibold text-white text-lg">Nova Marketing</h3>
+              <p class="text-[#DDE9F8] text-sm mt-1">Landing page para captar clientes B2B.</p>
+            </div>
+          </div>
+        </div>
+        <div class="shrink-0 px-2.5" style="width:300px">
+          <div class="port-card h-72" style="background:linear-gradient(160deg,#123A6B,#0B63CE)">
+            <div class="port-overlay">
+              <span class="text-xs text-[#C3DBFF] font-medium mb-1">Profesional independiente</span>
+              <h3 class="font-display font-semibold text-white text-lg">Dra. Valeria Ríos</h3>
+              <p class="text-[#E2ECF9] text-sm mt-1">Sitio personal con agenda de citas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-2 justify-center mt-6" id="port-dots"></div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso" class="py-20 md:py-24 bg-[var(--sky)]">
+  <div class="container-px max-w-7xl mx-auto">
+    <div class="max-w-2xl reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Creamos tu página web en 4 pasos</h2>
+    </div>
+    <div class="mt-14 relative">
+      <div class="hidden md:block absolute top-6 left-0 right-0 h-[3px] step-line rounded-full"></div>
+      <div class="grid md:grid-cols-4 gap-10 md:gap-6">
+        <div class="reveal">
+          <div class="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-display font-bold relative z-10">01</div>
+          <h3 class="font-display font-semibold text-lg mt-5">Cuéntanos tu idea</h3>
+          <p class="text-[var(--ink-soft)] text-sm mt-2">Nos explicas qué haces y qué necesitas para tu negocio.</p>
+        </div>
+        <div class="reveal">
+          <div class="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-display font-bold relative z-10">02</div>
+          <h3 class="font-display font-semibold text-lg mt-5">Diseñamos</h3>
+          <p class="text-[var(--ink-soft)] text-sm mt-2">Creamos una propuesta visual pensada para tu negocio.</p>
+        </div>
+        <div class="reveal">
+          <div class="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-display font-bold relative z-10">03</div>
+          <h3 class="font-display font-semibold text-lg mt-5">Desarrollamos</h3>
+          <p class="text-[var(--ink-soft)] text-sm mt-2">Construimos y configuramos tu sitio web por completo.</p>
+        </div>
+        <div class="reveal">
+          <div class="w-12 h-12 rounded-full bg-[var(--navy)] text-white flex items-center justify-center font-display font-bold relative z-10">04</div>
+          <h3 class="font-display font-semibold text-lg mt-5">Publicamos</h3>
+          <p class="text-[var(--ink-soft)] text-sm mt-2">Ponemos tu página en Internet y te entregamos tu proyecto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA EMPRENDEDORES -->
+<section class="py-20 md:py-24 navy-panel text-white">
+  <div class="container-px max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">¿Tienes un emprendimiento? Hagamos crecer tu negocio juntos.</h2>
+      <p class="mt-5 text-[#B9C9E6] max-w-lg">Si vendes productos, ofreces servicios o estás comenzando un negocio, podemos ayudarte a construir una página web profesional sin necesidad de conocimientos técnicos.</p>
+      <a href="#contacto" class="btn-primary inline-flex rounded-full px-7 py-3.5 mt-8">Quiero impulsar mi negocio</a>
+    </div>
+    <div class="reveal grid grid-cols-2 gap-3 text-sm">
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Emprendedores</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Comercios</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Profesionales independientes</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Restaurantes</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Tiendas</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Servicios técnicos</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Artesanos</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center">Negocios locales</span>
+      <span class="bg-white/10 rounded-full px-4 py-2.5 text-center col-span-2">Pequeñas empresas</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS (SLIDER) -->
+<section class="py-20 md:py-24">
+  <div class="container-px max-w-5xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-4 reveal">
+      <div>
+        <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Lo que dicen nuestros <span class="text-[var(--blue)]">clientes</span></h2>
+        <p class="mt-2 text-sm text-[var(--ink-soft)]">Testimonios de ejemplo, elaborados con fines demostrativos.</p>
+      </div>
+      <div class="flex gap-3">
+        <button class="slider-arrow" id="testi-prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="slider-arrow" id="testi-next" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="mt-10 slider-viewport" id="testi-viewport">
+      <div class="slider-track" id="testi-track">
+        <div class="w-full shrink-0 px-2.5">
+          <div class="bento-card p-8 text-center max-w-lg mx-auto">
+            <div class="stars mb-3">★★★★★</div>
+            <p class="text-[var(--ink-soft)]">"Mi negocio empezó a recibir pedidos por WhatsApp desde la primera semana. El proceso fue simple y rápido."</p>
+            <p class="mt-4 font-semibold text-sm">Marisol T. <span class="font-normal text-[var(--ink-soft)]">— Repostería (ejemplo)</span></p>
+          </div>
+        </div>
+        <div class="w-full shrink-0 px-2.5">
+          <div class="bento-card p-8 text-center max-w-lg mx-auto">
+            <div class="stars mb-3">★★★★★</div>
+            <p class="text-[var(--ink-soft)]">"No tenía conocimientos técnicos y aun así pude tener mi catálogo digital funcionando en pocos días."</p>
+            <p class="mt-4 font-semibold text-sm">Jorge L. <span class="font-normal text-[var(--ink-soft)]">— Servicio técnico (ejemplo)</span></p>
+          </div>
+        </div>
+        <div class="w-full shrink-0 px-2.5">
+          <div class="bento-card p-8 text-center max-w-lg mx-auto">
+            <div class="stars mb-3">★★★★★</div>
+            <p class="text-[var(--ink-soft)]">"La página se ve profesional y funciona perfecto en el celular, que es donde me escriben la mayoría de clientes."</p>
+            <p class="mt-4 font-semibold text-sm">Andrea P. <span class="font-normal text-[var(--ink-soft)]">— Salón de belleza (ejemplo)</span></p>
+          </div>
+        </div>
+        <div class="w-full shrink-0 px-2.5">
+          <div class="bento-card p-8 text-center max-w-lg mx-auto">
+            <div class="stars mb-3">★★★★★</div>
+            <p class="text-[var(--ink-soft)]">"El equipo entendió exactamente lo que mi restaurante necesitaba. Recomendado para cualquier emprendedor."</p>
+            <p class="mt-4 font-semibold text-sm">Carlos M. <span class="font-normal text-[var(--ink-soft)]">— Restaurante (ejemplo)</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex gap-2 justify-center mt-6" id="testi-dots"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 md:py-24 bg-[var(--sky)]">
+  <div class="container-px max-w-3xl mx-auto">
+    <div class="reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Preguntas frecuentes</h2>
+    </div>
+    <div class="mt-10 space-y-3">
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Cuánto cuesta crear una página web?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Depende del plan que elijas. Tenemos opciones desde una página de una sección hasta tiendas virtuales completas. Revisa la sección de planes o solicita una cotización personalizada.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Cuánto tiempo demora?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">El tiempo varía según la complejidad del proyecto, pero la mayoría de páginas para emprendedores están listas en pocos días.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Puedo tener mi propio dominio?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí. Te orientamos en el registro de tu propio dominio para que tu marca tenga una dirección web propia.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿La página funciona en celulares?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí, todas nuestras páginas se diseñan primero para celular y se adaptan perfectamente a cualquier pantalla.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Puedo actualizar el contenido?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí. Podemos dejarte accesos para editar contenido, o encargarnos nosotros con nuestro plan de mantenimiento.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Pueden integrar WhatsApp?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí, es una de nuestras integraciones más solicitadas. Añadimos botones y formularios conectados a tu WhatsApp.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Pueden crear una tienda virtual?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí, dentro del Plan Negocio incluimos la creación de catálogos digitales y tiendas virtuales.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Ofrecen mantenimiento?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">Sí, ofrecemos planes de mantenimiento con actualizaciones y soporte técnico continuo.</p></div>
+      </div>
+      <div class="faq-item bg-white border border-[var(--line)] rounded-2xl px-6 reveal">
+        <button class="faq-q w-full flex items-center justify-between py-5 text-left font-medium">
+          <span>¿Necesito conocimientos técnicos?</span>
+          <svg class="chev shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer"><p class="pb-5 text-[var(--ink-soft)] text-sm">No. Nosotros nos encargamos de todo el proceso técnico, tú solo nos cuentas tu idea.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="py-10">
+  <div class="container-px max-w-7xl mx-auto">
+    <div class="navy-panel rounded-2xl px-6 sm:px-10 py-8 flex flex-col sm:flex-row items-center justify-between gap-6 reveal">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 015-8c1.7-1.7 6-1.7 6-1.7s0 4.3-1.7 6a22 22 0 01-8 5"/><path d="M9 12H4s.55-3.5 2-5c1.16-1.16 5 0 5 0"/><path d="M12 15v5s3.5-.55 5-2c1.16-1.16 0-5 0-5"/></svg>
+        </div>
+        <div class="text-white">
+          <h3 class="font-display font-semibold text-lg">¿Listo para llevar tu negocio al siguiente nivel?</h3>
+          <p class="text-[#B9C9E6] text-sm mt-1">Contáctanos y pide tu cotización sin compromiso.</p>
+        </div>
+      </div>
+      <a href="#contacto" class="btn-pill-white rounded-full px-7 py-3 whitespace-nowrap">Escríbenos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULARIO DE COTIZACIÓN -->
+<section id="contacto" class="py-20 md:py-24">
+  <div class="container-px max-w-4xl mx-auto">
+    <div class="reveal">
+      <h2 class="font-display font-bold text-3xl md:text-4xl tracking-tight">Cuéntanos sobre tu proyecto</h2>
+      <p class="mt-3 text-[var(--ink-soft)]">Completa el formulario y te contactaremos con una propuesta a tu medida.</p>
+    </div>
+
+    <form id="quote-form" novalidate class="mt-10 grid sm:grid-cols-2 gap-5 reveal">
+      <div class="field">
+        <label for="q-name">Nombre</label>
+        <input id="q-name" name="name" type="text" required placeholder="Tu nombre completo">
+        <p class="field-error">Por favor ingresa tu nombre.</p>
+      </div>
+      <div class="field">
+        <label for="q-business">Nombre del emprendimiento</label>
+        <input id="q-business" name="business" type="text" required placeholder="Nombre de tu negocio">
+        <p class="field-error">Por favor ingresa el nombre de tu emprendimiento.</p>
+      </div>
+      <div class="field">
+        <label for="q-whatsapp">WhatsApp</label>
+        <input id="q-whatsapp" name="whatsapp" type="tel" required placeholder="+51 9XX XXX XXX">
+        <p class="field-error">Ingresa un número de WhatsApp válido.</p>
+      </div>
+      <div class="field">
+        <label for="q-email">Correo electrónico</label>
+        <input id="q-email" name="email" type="email" required placeholder="tucorreo@ejemplo.com">
+        <p class="field-error">Ingresa un correo electrónico válido.</p>
+      </div>
+      <div class="field">
+        <label for="q-type">Tipo de negocio</label>
+        <select id="q-type" name="type" required>
+          <option value="">Selecciona una opción</option>
+          <option>Emprendimiento</option><option>Comercio</option><option>Profesional independiente</option>
+          <option>Restaurante</option><option>Tienda</option><option>Servicio técnico</option><option>Otro</option>
+        </select>
+        <p class="field-error">Selecciona el tipo de negocio.</p>
+      </div>
+      <div class="field">
+        <label for="q-service">Servicio que necesitas</label>
+        <select id="q-service" name="service" required>
+          <option value="">Selecciona una opción</option>
+          <option>Página web de una sección</option><option>Página web multipágina</option><option>Tienda virtual</option>
+          <option>Landing page</option><option>Mantenimiento</option><option>No estoy seguro</option>
+        </select>
+        <p class="field-error">Selecciona el servicio que necesitas.</p>
+      </div>
+      <div class="field sm:col-span-2">
+        <label for="q-budget">Presupuesto aproximado</label>
+        <select id="q-budget" name="budget">
+          <option value="">Selecciona un rango (opcional)</option>
+          <option>Menos de S/ 500</option><option>S/ 500 - S/ 900</option><option>S/ 900 - S/ 1500</option><option>Más de S/ 1500</option>
+        </select>
+      </div>
+      <div class="field sm:col-span-2">
+        <label for="q-desc">Descripción del proyecto</label>
+        <textarea id="q-desc" name="description" rows="4" required placeholder="Cuéntanos qué necesitas para tu negocio"></textarea>
+        <p class="field-error">Cuéntanos brevemente tu proyecto.</p>
+      </div>
+      <div class="sm:col-span-2">
+        <button type="submit" class="btn-primary rounded-full px-8 py-3.5 w-full sm:w-auto">Solicitar cotización</button>
+      </div>
+    </form>
+
+    <div id="quote-success" class="hidden mt-10 bento-card p-8 text-center reveal is-visible">
+      <div class="w-14 h-14 rounded-full bg-[#E8F7F0] flex items-center justify-center mx-auto mb-4">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16A672" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-xl">¡Solicitud enviada!</h3>
+      <p class="text-[var(--ink-soft)] mt-2 max-w-sm mx-auto">Se abrió WhatsApp con los datos de tu proyecto. Si no se abrió automáticamente, revisa que tu navegador permita ventanas emergentes y vuelve a intentarlo.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="navy-panel text-white pt-16 pb-8">
+  <div class="container-px max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2">
+        <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
+          <circle cx="50" cy="50" r="48" fill="white" fill-opacity="0.08"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="#5FA8FF" stroke-width="6"/>
+          <path d="M12 50h76M50 12a62 62 0 010 76 62 62 0 010-76" fill="none" stroke="#5FA8FF" stroke-width="5"/>
+        </svg>
+        <span class="font-display font-bold"><span class="text-white">WebCorp</span><span class="text-[#5FA8FF]">Quilla</span></span>
+      </div>
+      <p class="text-sm text-[#B9C9E6] mt-4">Tu negocio en el mundo digital.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Explora</h4>
+      <ul class="space-y-2 text-sm text-[#B9C9E6]">
+        <li><a href="#inicio" class="hover:text-white">Inicio</a></li>
+        <li><a href="#nosotros" class="hover:text-white">Nosotros</a></li>
+        <li><a href="#servicios" class="hover:text-white">Servicios</a></li>
+        <li><a href="#portafolio" class="hover:text-white">Portafolio</a></li>
+        <li><a href="#contacto" class="hover:text-white">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Contacto</h4>
+      <ul class="space-y-2 text-sm text-[#B9C9E6]">
+        <li>WhatsApp: +51 900 000 000</li>
+        <li>Correo: hola@webcorpquilla.com</li>
+        <li>Lima, Perú</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Síguenos</h4>
+      <div class="flex gap-3">
+        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M13 22v-9h3l1-4h-4V7c0-1.1.5-2 2-2h2V1.2C16.7 1 15.6 1 14.5 1 11.4 1 9 3 9 6.6V9H6v4h3v9h4z"/></svg></a>
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M4.98 3.5a2 2 0 110 4 2 2 0 010-4zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4 0 4.7 2.6 4.7 6V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4V9z"/></svg></a>
+        <a href="#" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.6 6.3A8.9 8.9 0 003.3 16.8L2 22l5.4-1.4A8.9 8.9 0 0017.6 6.3z"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-px max-w-7xl mx-auto border-t border-white/10 mt-12 pt-6 text-xs text-[#8FA3C7] flex flex-col sm:flex-row justify-between gap-2">
+    <span>© 2026 WebCorpQuilla. Todos los derechos reservados.</span>
+    <span>Diseñado y desarrollado por WebCorpQuilla.</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a id="whatsapp-float" href="#" target="_blank" rel="noopener" class="whatsapp-float group flex items-center gap-2 bg-[#25D366] text-white pl-3 pr-4 py-3 rounded-full shadow-xl hover:pr-5 transition-all" aria-label="Escríbenos por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.6 6.3A8.9 8.9 0 003.3 16.8L2 22l5.4-1.4A8.9 8.9 0 0017.6 6.3zM12 20a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1s-.6.8-.7.9-.3.2-.5.1a6.5 6.5 0 01-3.3-2.9c-.2-.4.2-.4.5-1.3 0-.2 0-.3-.1-.4L9.2 7.9c-.2-.4-.4-.3-.5-.3h-.4a.9.9 0 00-.6.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.8 2.6 1 2.6.7 3 .7.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2s-.2-.2-.5-.3z"/></svg>
+  <span class="text-sm font-semibold hidden sm:inline">¿Tienes una consulta? Escríbenos</span>
+</a>
+
+<script>
+  // ===== CONFIGURACIÓN (editar aquí para cambiar el número de WhatsApp) =====
+  const WHATSAPP_NUMBER = "51930935714";
+  const WHATSAPP_MESSAGE = "Hola WebCorpQuilla, estoy interesado(a) en crear una página web para mi emprendimiento. Me gustaría recibir información.";
+
+  // ===== PRECIOS (editar aquí para cambiar precios fácilmente) =====
+  const PRICES = { emprendedor: "S/ 150", profesional: "S/ 290", negocio: "A cotizar" };
+
+  // ---- Generic slider factory ----
+  function createSlider({ trackId, dotsId, prevId, nextId, slideSelector, perView = () => 1, autoplay = 0 }) {
+    const track = document.getElementById(trackId);
+    if (!track) return;
+    const dotsWrap = dotsId ? document.getElementById(dotsId) : null;
+    const prevBtn = prevId ? document.getElementById(prevId) : null;
+    const nextBtn = nextId ? document.getElementById(nextId) : null;
+    let index = 0;
+    let timer = null;
+
+    function slides() { return Array.from(track.querySelectorAll(slideSelector)); }
+    function maxIndex() {
+      const total = slides().length;
+      const pv = perView();
+      return Math.max(0, total - pv);
+    }
+    function slideWidth() {
+      const first = slides()[0];
+      return first ? first.getBoundingClientRect().width : 0;
+    }
+    function update() {
+      const w = slideWidth();
+      track.style.transform = `translateX(-${index * w}px)`;
+      if (dotsWrap) {
+        dotsWrap.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === index));
+      }
+    }
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      const count = maxIndex() + 1;
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ir a diapositiva ' + (i + 1));
+        dot.addEventListener('click', () => { index = i; update(); resetAutoplay(); });
+        dotsWrap.appendChild(dot);
+      }
+    }
+    function go(dir) {
+      index = Math.max(0, Math.min(maxIndex(), index + dir));
+      update();
+    }
+    function resetAutoplay() {
+      if (!autoplay) return;
+      clearInterval(timer);
+      timer = setInterval(() => {
+        index = index >= maxIndex() ? 0 : index + 1;
+        update();
+      }, autoplay);
+    }
+
+    prevBtn && prevBtn.addEventListener('click', () => { go(-1); resetAutoplay(); });
+    nextBtn && nextBtn.addEventListener('click', () => {
+      if (index >= maxIndex()) { index = 0; update(); } else { go(1); }
+      resetAutoplay();
+    });
+
+    window.addEventListener('resize', () => { buildDots(); update(); });
+    buildDots();
+    update();
+    resetAutoplay();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    document.getElementById('whatsapp-float').href = waLink;
+
+    document.querySelectorAll('[data-price]').forEach(el => {
+      const key = el.getAttribute('data-price');
+      if (PRICES[key]) el.textContent = PRICES[key];
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden'); iconOpen.classList.remove('hidden'); iconClose.classList.add('hidden');
+    }));
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-q').addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Plan buttons -> prefill budget
+    document.querySelectorAll('.plan-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const plan = btn.getAttribute('data-plan');
+        const budgetMap = { 'Plan Emprendedor': 'Menos de S/ 500', 'Plan Profesional': 'S/ 500 - S/ 900', 'Plan Negocio': 'Más de S/ 1500' };
+        const budgetSel = document.getElementById('q-budget');
+        if (budgetMap[plan] && budgetSel) { [...budgetSel.options].forEach(o => { if (o.text === budgetMap[plan]) budgetSel.value = o.value; }); }
+      });
+    });
+
+    // Quote form validation
+    const form = document.getElementById('quote-form');
+    const successBox = document.getElementById('quote-success');
+    function validateField(field) {
+      const input = field.querySelector('input, select, textarea');
+      if (!input.hasAttribute('required')) return true;
+      let valid = input.value.trim().length > 0;
+      if (valid && input.type === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      if (valid && input.type === 'tel') valid = input.value.replace(/[^0-9]/g, '').length >= 7;
+      field.classList.toggle('invalid', !valid);
+      return valid;
+    }
+    function buildWhatsAppQuoteMessage(data) {
+      const lines = [
+        'Hola WebCorpQuilla, quiero solicitar una cotización:',
+        `Nombre: ${data.name}`,
+        `Emprendimiento: ${data.business}`,
+        `WhatsApp: ${data.whatsapp}`,
+        `Correo: ${data.email}`,
+        `Tipo de negocio: ${data.type}`,
+        `Servicio: ${data.service}`,
+        data.budget ? `Presupuesto: ${data.budget}` : null,
+        `Descripción: ${data.description}`
+      ].filter(Boolean);
+      return lines.join('\n');
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let allValid = true;
+      form.querySelectorAll('.field').forEach(f => { if (!validateField(f)) allValid = false; });
+      if (allValid) {
+        const data = Object.fromEntries(new FormData(form).entries());
+        const msg = buildWhatsAppQuoteMessage(data);
+        const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+        window.open(waLink, '_blank');
+
+        form.classList.add('hidden');
+        successBox.classList.remove('hidden');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const firstInvalid = form.querySelector('.field.invalid');
+        if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+    form.querySelectorAll('.field input, .field select, .field textarea').forEach(input => {
+      input.addEventListener('blur', () => validateField(input.closest('.field')));
+    });
+
+    // ---- Init sliders ----
+    createSlider({ trackId: 'hero-track', dotsId: 'hero-dots', prevId: 'hero-prev', nextId: 'hero-next', slideSelector: ':scope > div', perView: () => 1, autoplay: 6000 });
+
+    function servicesPerView() {
+      const vw = window.innerWidth;
+      if (vw < 640) return 1;
+      if (vw < 1024) return 2;
+      return 4;
+    }
+    createSlider({ trackId: 'services-track', dotsId: 'services-dots', prevId: 'services-prev', nextId: 'services-next', slideSelector: '.service-slide', perView: servicesPerView, autoplay: 0 });
+
+    function portPerView() {
+      const vw = window.innerWidth;
+      if (vw < 640) return 1;
+      if (vw < 1024) return 2;
+      return 3;
+    }
+    createSlider({ trackId: 'port-track', dotsId: 'port-dots', prevId: 'port-prev', nextId: 'port-next', slideSelector: ':scope > div', perView: portPerView, autoplay: 0 });
+
+    createSlider({ trackId: 'testi-track', dotsId: 'testi-dots', prevId: 'testi-prev', nextId: 'testi-next', slideSelector: ':scope > div', perView: () => 1, autoplay: 7000 });
+  });
+</script>
+
+</body>
+</html>
